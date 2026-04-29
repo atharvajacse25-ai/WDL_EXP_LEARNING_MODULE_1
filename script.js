@@ -47,16 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('https://api.frankfurter.app/latest?from=USD&to=' + targetCurrency);
+            const response = await fetch('https://open.er-api.com/v6/latest/USD');
             const data = await response.json();
             const rate = data.rates[targetCurrency];
 
-            document.getElementById('price-launchpad').innerText = (prices.launchpad * rate).toFixed(2);
-            document.getElementById('price-accelerator').innerText = (prices.accelerator * rate).toFixed(2);
-            document.getElementById('price-velocity').innerText = (prices.velocity * rate).toFixed(2);
+            if (rate) {
+                document.getElementById('price-launchpad').innerText = (prices.launchpad * rate).toFixed(2);
+                document.getElementById('price-accelerator').innerText = (prices.accelerator * rate).toFixed(2);
+                document.getElementById('price-velocity').innerText = (prices.velocity * rate).toFixed(2);
+            } else {
+                throw new Error('Rate not found');
+            }
         } catch (error) {
             console.error('Conversion error:', error);
-            alert('Failed to fetch conversion rates.');
+            // Fallback to basic error message without alert for better UX
+            const errorMsg = document.createElement('p');
+            errorMsg.style.color = 'red';
+            errorMsg.innerText = 'Could not update prices. Please try again later.';
+            document.getElementById('pricing').appendChild(errorMsg);
         }
     }
 
