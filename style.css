@@ -219,3 +219,9 @@ footer {
         padding: 40px 20px;
     }
 }
+
+nav ul li a.active {
+    color: #fff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
