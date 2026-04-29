@@ -68,6 +68,17 @@
 
     <section id="pricing">
             <h2>Flexible Growth Plans</h2>
+            
+            <div style="text-align: center; margin-bottom: 20px;">
+                <label>Select Currency: </label>
+                <select id="currency-select">
+                    <option value="USD">USD ($)</option>
+                    <option value="INR">INR (₹)</option>
+                    <option value="EUR">EUR (€)</option>
+                    <option value="GBP">GBP (£)</option>
+                </select>
+            </div>
+
             <table border="1" width="100%">
                 <thead>
                     <tr>
@@ -78,6 +89,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td><strong>Monthly Price</strong></td>
+                        <td><span id="price-launchpad">499</span> USD</td>
+                        <td><span id="price-accelerator">1499</span> USD</td>
+                        <td><span id="price-velocity">2999</span> USD</td>
+                    </tr>
                     <tr>
                         <td>Search Ranking</td>
                         <td>Initial Audit</td>
