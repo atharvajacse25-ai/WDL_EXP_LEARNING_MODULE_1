@@ -190,3 +190,28 @@ footer {
     margin-top: 30px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+    
+    #expertise table tr {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #results table tr {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section {
+        padding: 40px 20px;
+    }
+}
