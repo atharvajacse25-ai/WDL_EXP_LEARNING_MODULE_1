@@ -1,4 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    function showSection(id) {
+        sections.forEach(section => {
+            if (section.id === id) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            showSection(targetId);
+            
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    showSection('home');
+
     const currencySelect = document.getElementById('currency-select');
     const prices = {
         launchpad: 499,
