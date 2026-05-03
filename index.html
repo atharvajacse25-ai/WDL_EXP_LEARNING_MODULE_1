@@ -1,77 +1,83 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Growth Hackers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Growth Hackers - Scaling Agency</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#expertise">Our Expertise</a></li>
-                <li><a href="#pricing">Growth Plans</a></li>
-                <li><a href="#results">Results</a></li>
-                <li><a href="#success">Projects</a></li>
-                <li><a href="#join">Newsletter</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Growth Hackers</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#expertise">Expertise</a>
+                <a class="nav-link" href="#pricing">Pricing</a>
+                <a class="nav-link" href="#results">Results</a>
+                <a class="nav-link" href="#join">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <hr>
+    <div class="container mt-4">
+        <section id="home" class="text-center">
+            <h2>Expert Growth for Your Business</h2>
+            <p><strong>"We help brands reach new heights with smart digital strategies."</strong></p>
+            <p>Our agency works as your partner to grow your online presence. We focus on getting real results using social ads and search technology.</p>
+            <img src="HOME.png" class="img-fluid" width="600">
+        </section>
 
-    <section id="home">
-        <h2>Expert Growth for Your Business</h2>
-        <p><strong>"We help brands reach new heights with smart digital strategies."</strong></p>
-        <p>Our agency works as your partner to grow your online presence. We focus on getting real results using social
-            ads and search technology.</p>
-        <img src="HOME.png" width="600">
-    </section>
+        <hr>
 
-    <hr>
+        <section id="expertise">
+            <h2 class="text-center">What We Do Best</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Search Visibility</h3>
+                            <p class="card-text">We make sure your website shows up first when people search for your services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Targeted Advertising</h3>
+                            <p class="card-text">We run clever ad campaigns to find the right customers for your brand.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Business Automation</h3>
+                            <p class="card-text">We use smart tools to automate your daily tasks so you can focus on big things.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Media Creation</h3>
+                            <p class="card-text">We create high quality videos and designs that grab people's attention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="expertise">
-        <h2>What We Do Best</h2>
-        <table border="0" width="100%">
-            <tbody>
-                <tr>
-                    <td>
-                        <h3>Search Visibility</h3>
-                        <p>We make sure your website shows up first when people search for your services.</p>
-                    </td>
-                    <td>
-                        <h3>Targeted Advertising</h3>
-                        <p>We run clever ad campaigns to find the right customers for your brand.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h3>Business Automation</h3>
-                        <p>We use smart tools to automate your daily tasks so you can focus on big things.</p>
-                    </td>
-                    <td>
-                        <h3>Media Creation</h3>
-                        <p>We create high quality videos and designs that grab people's attention.</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+        <hr>
 
-    <hr>
-
-    <section id="pricing">
-            <h2>Flexible Growth Plans</h2>
+        <section id="pricing">
+            <h2 class="text-center">Flexible Growth Plans</h2>
             
-            <div style="text-align: center; margin-bottom: 20px;">
+            <div class="text-center mb-3">
                 <label>Select Currency: </label>
-                <select id="currency-select">
+                <select id="currency-select" class="form-select w-25 d-inline-block">
                     <option value="USD">USD ($)</option>
                     <option value="INR">INR (₹)</option>
                     <option value="EUR">EUR (€)</option>
@@ -79,8 +85,8 @@
                 </select>
             </div>
 
-            <table border="1" width="100%">
-                <thead>
+            <table class="table table-bordered">
+                <thead class="table-light">
                     <tr>
                         <th>Service Detail</th>
                         <th>Launchpad Plan</th>
@@ -126,61 +132,82 @@
         <hr>
 
         <section id="results">
-            <h2>Our Success Numbers</h2>
-            <table border="0" width="100%">
-                <tbody>
-                    <tr>
-                        <td>
+            <h2 class="text-center">Our Success Numbers</h2>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
                             <h3>420+</h3>
                             <p>Global Partners</p>
-                        </td>
-                        <td>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
                             <h3>$900M+</h3>
                             <p>Revenue Impact</p>
-                        </td>
-                        <td>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
                             <h3>96%</h3>
                             <p>Client Loyalty</p>
-                        </td>
-                        <td>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
                             <h3>14x</h3>
                             <p>Scaling Speed</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <hr>
 
         <section id="success">
-            <h2>Our Latest Projects</h2>
+            <h2 class="text-center">Our Latest Projects</h2>
             <p>See how we transformed these businesses recently.</p>
-            <h3>Case Study: Tech Startup</h3>
-            <p>Increased their sales by 400% in 6 months using search tools.</p>
-            <h3>Case Study: E-commerce Brand</h3>
-            <p>Built a huge social media following and doubled their profit.</p>
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h3>Case Study: Tech Startup</h3>
+                    <p>Increased their sales by 400% in 6 months using search tools.</p>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h3>Case Study: E-commerce Brand</h3>
+                    <p>Built a huge social media following and doubled their profit.</p>
+                </div>
+            </div>
         </section>
 
         <hr>
 
-        <section id="join">
+        <section id="join" class="text-center">
             <h2>Stay Updated</h2>
             <p>Join our list to get tips on how to grow your brand.</p>
-            <form>
-                <label>Email Address:</label>
-                <input type="email" required>
-                <button type="submit">Sign Me Up</button>
+            <form class="mb-4">
+                <div class="mb-3">
+                    <label class="form-label">Email Address:</label>
+                    <input type="email" class="form-control w-50 m-auto" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Me Up</button>
             </form>
         </section>
 
-        <hr>
-
-        <footer>
+        <footer class="text-center p-3">
             <p>Copyright 2024 - Growth Hackers Official Scaling Agency</p>
         </footer>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
-</html>
+</html>
